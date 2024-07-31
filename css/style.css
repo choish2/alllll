@@ -13,7 +13,7 @@ header .top_menu .logo img {width: 100%;object-fit: cover;}
 header .top_menu .logo a{display: inline-block;margin-left: 1vw;}
 header .top_menu .logo span{position: absolute;height: 20vh;z-index: -1;}
 header .top_menu .menu {width:50%;display: flex;text-align: center;;justify-content:end;align-items: center;}
-header .top_menu .menu li{width: 10%;font-size:.9375rem}
+header .top_menu .menu li{width: 15%;font-size:.9375rem}
 header .top_menu .menu li a{color: #fff  ;display: block;text-align: center; }
 
 
@@ -133,9 +133,10 @@ footer .centerbox1340 .copyright li p a {color: #fff;display: flex;
 
 
   html, body{font-size: 1.1vw;}
-  header .top_menu{width: 100%;padding: 0;}
-  header .top_menu .menu a{font-size: 1.1vw;}
-  header .top_menu .logo{width: 30vw;margin-bottom: 0;}
+  header .top_menu{width: 100%;padding: 0;;}
+  header .top_menu .menu a{font-size: 1vw;}
+  header .top_menu .logo{width: 30vw;margin-bottom: 0;max-height:30px;
+    ;}
   header nav .gnb li{font-size: 1.2vw;width: auto;margin-top: 0}
   header nav .gnb li a{padding: 0;}
   #section1 h2::before{content: "";width: 20%;height: 7%;position: absolute;background: #E4E8EC;left: 50%;transform: translate(-50%);}
@@ -144,7 +145,6 @@ footer .centerbox1340 .copyright li p a {color: #fff;display: flex;
   #section1 .img_box .big_img{max-width:100%;margin: 0;height: 60%;}
   #section1 .img_box .small_img{margin-top:3vw;margin: 0;gap: 0;padding: 0;display: flex;flex-wrap: wrap; max-width: 100%;margin-top: 3vw;max-height: 100%;}
   #section1 .img_box .small_img li{width: 45%;margin-bottom: 3vw;flex-wrap: wrap;margin: 0 auto;height: 70%;flex-grow: 1;}
-  #section1 .img_box .small_img li a{background: darkgoldenrod;}
   #section1 .img_box .small_img li a figure{width: 100%;max-height: 70%;background: darkcyan;}
   #section1 .img_box .small_img li a figure img{background-size: cover;width: 100%;;}
   #section1 .img_box .small_img li:nth-child(1)
@@ -188,25 +188,12 @@ footer .centerbox1340 .copyright li p a {color: #fff;display: flex;
   #section3 .centerbox1340 .img_box li p{font-size: 1.5rem;}
   #section3 .centerbox1340 .img_box li strong{font-size: 2.5rem;}
 
-
-  .swiper {
-    width: 100%;
-    height: 100%; /* 높이 설정, 필요에 따라 조정 */
-    overflow: hidden;
-}
-
-.swiper-wrapper {
-    display: flex;
-    flex-direction: column; 
-    width: 80%;
-    border: #000;/* 세로 방향으로 슬라이드를 배치 */
-
-  }
  #section3 .centerbox1340 .img_box li{max-width: 100%;background-size: cover;max-height: 30%;}
 
   footer .logo{max-width: 40%;}
-
-
+  footer .centerbox1340 .copyright p{width: 60%;font-size: 1rem; }
+  footer .centerbox1340 .copyright li:nth-child(2){width: 60%;}
+  footer br{display: none;}
 }
 
 
