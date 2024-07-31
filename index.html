@@ -130,7 +130,7 @@
             </section>
             <section id="section3">
                 <h2>이벤트</h2>
-                    
+                <div id="span3"></div>
                 <div class="centerbox1340">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
@@ -175,6 +175,7 @@
                         </ul>
                     </div>
                           <div class="swiper-slide">
+
                             <ul class="img_box">
                             
                                 <li>
@@ -295,7 +296,37 @@ function initSwiper() {
             swiper = null;
         }
     }
+ 
 }
+document.addEventListener('DOMContentLoaded', function() {
+      if (window.innerWidth < 768) {
+      
+        const section = document.getElementById('span3');
+        
+        if (section) {
+          // 새 span 요소 생성
+          const newSpan1 = document.createElement('span');
+          newSpan1.textContent = '진행중';
+          const newSpan2 = document.createElement('span');
+          newSpan2.textContent = '종료됨';
+          
+          // 특정 위치의 요소 찾기 (예: 두 번째 <p> 요소 뒤에 추가)
+          const referenceNode = section.children[0]; // 두 번째 <p> 요소
+          
+          
+          // 새 요소를 referenceNode 뒤에 추가
+          section.insertBefore(newSpan1, referenceNode);
+          section.insertBefore(newSpan2, referenceNode);
+        
+        } else {
+          console.error('Element with id "span3" not found');
+        }
+
+
+      }
+    })
+    
+
 document.addEventListener('DOMContentLoaded', initSwiper);
 
 // 브라우저 크기 변경 시 Swiper 상태 업데이트
