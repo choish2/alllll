@@ -64,8 +64,41 @@ $(window).scroll(function(){
 
 } )
 
-if(window.innerWidth <= 1024){
-    $('#section3')
+if(window.innerWidth <= 768){
+    document.addEventListener('DOMContentLoaded', function() {
+        const productImage = document.getElementById('productImage');
+        const magnifyingGlass = document.getElementById('magnifyingGlass');
+
+        productImage.addEventListener('mousemove', function(e) {
+            const rect = productImage.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // 확대경 위치 설정
+            magnifyingGlass.style.left = `${x - magnifyingGlass.offsetWidth / 1}px`;
+            magnifyingGlass.style.top = `${y - magnifyingGlass.offsetHeight / 1}px`;
+
+            // 이미지 확대 위치 조정
+            magnifyingGlass.style.backgroundPosition = `-${x * 13}px -${y * 10}px`;
+        });
+
+        productImage.addEventListener('mouseenter', function() {
+            magnifyingGlass.style.display = 'block';
+            magnifyingGlass.style.transform = 'scale(1.2)';
+            
+        });
+
+        productImage.addEventListener('mouseleave', function() {
+            magnifyingGlass.style.display = 'none';
+            magnifyingGlass.style.transform = 'scale(1)';
+        
+        
+        });
+    
+    });
+
+
+
+
+
 }
-
-

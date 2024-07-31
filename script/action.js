@@ -82,3 +82,5 @@ $(document).ready(function() {
         $(this).children().css({'font-weight': 500 , 'color': '#fff'})
     
     })
+
+   

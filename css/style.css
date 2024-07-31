@@ -88,7 +88,6 @@ ytp-chrome-top ytp-show-cards-title{display: none;}
 #section1 .img_box .big_img .text{position: absolute;width: 50%;height: 100%;left: 100%;top: 0;background: rgba(0,0,0,.5);color: #fff;font-size: 50px;text-align: center;display: flex;align-items: center;justify-content: center;transition: .5s;overflow: hidden cubic-bezier(.13,.56,.07,1.01);}
 #section1 .img_box .big_img.on .text{left: 50%;height: 490px;}
 
-
 #section2{width: 100%;padding: 100px 0;background: #E4E8EC; ;}
 #section2 .centerbox1340{display: flex;align-items: center;;justify-content: space-between;}
 #section2 .centerbox1340 .img_box figure{width: 100%;;margin-bottom: 1vw;}
@@ -109,6 +108,7 @@ ytp-chrome-top ytp-show-cards-title{display: none;}
 #section3 .centerbox1340 .img_box li p:nth-child(2){margin-top: .5vw;}
 #section3 .centerbox1340 .img_box li strong{margin: .5vw 0 .5vw 0;}
 #section3 .swiper-slide .img_box li a:hover img{transform: scale(1.1);}
+#section3 span{display: none;}
 
 footer{width: 100%;background: #262C32;display: flex;align-items: center;justify-content: center;flex-direction: column;
 }
@@ -122,6 +122,8 @@ footer .centerbox1340 .copyright li:nth-child(2){border: 0px solid #000 ; width:
 footer .centerbox1340 .copyright li p{display: flex;width: 10%;;;justify-content: center;}
 footer .centerbox1340 .copyright li p a {color: #fff;display: flex;
 }
+
+
 
 @media screen and (max-width: 1600px){
   #visual{height: auto;}
@@ -179,27 +181,58 @@ footer .centerbox1340 .copyright li p a {color: #fff;display: flex;
 
 
 
-  #section3{width: 100%}
+  #section3{width: 100%;display: flex;flex-direction: column;}
   #section3 > h2{text-align: center;margin-bottom: 3vw;}
   #section3 > h2::before{content: "";position: absolute;left: 50%;max-width: 20%;transform: translate(-50%);}
-  
-  #section3 .swiper-slide .img_box li{display: flex;flex-direction: column;align-items: center;justify-content: center;}
-  #section3 .swiper-slide .img_box li > a{max-width:80%;padding: 1vw;flex-shrink: 1;;} 
-  #section3 .centerbox1340 .img_box li p{font-size: 1.5rem;}
-  #section3 .centerbox1340 .img_box li strong{font-size: 2.5rem;}
+  #section3 .swiper-slide .img_box li{margin-bottom: 1vw;}
+  #section3 .swiper-slide .img_box li > a{padding: 1vw;} 
+  #section3 .centerbox1340 .img_box li p{font-size: 1.5rem;text-indent: .5vw;text-align: center;}
+  #section3 .centerbox1340 .img_box li strong{font-size: 2.5rem;text-align: center;;}
+  .swiper-wrapper{display: flex;flex-direction: column;}
+ #section3 {
+  width: 100%; /* 전체 너비를 100%로 설정 */
+  padding: 50px 0; /* 상하 패딩을 추가하여 여백 확보 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
 
- #section3 .centerbox1340 .img_box li{max-width: 100%;background-size: cover;max-height: 30%;}
+#section3 .centerbox1340 {
+  display: flex; /* Flexbox 사용 */
+  flex-direction: column; /* 세로 방향으로 나열 */
+  align-items: center; /* 중앙 정렬 */
+}
+
+#section3 .centerbox1340 .img_box {
+  display: flex; /* Flexbox 사용 */
+  flex-direction: column; /* 세로 방향으로 나열 */
+  width: 100%; /* 너비를 100%로 설정 */
+  align-items: center; /* 중앙 정렬 */
+}
+
+
+#section3 .centerbox1340 .img_box li a {
+  display: block; /* 블록 요소로 변경 */
+  width: 100%; /* 너비를 100%로 설정 */
+}
+
+#section3 .centerbox1340 .img_box li img {
+  width: 100%; /* 너비를 100%로 설정 */
+  height: auto; /* 높이 자동 조정 */
+}
+
 
   footer .logo{max-width: 40%;}
   footer .centerbox1340 .copyright p{width: 60%;font-size: 1rem; }
   footer .centerbox1340 .copyright li:nth-child(2){width: 60%;}
   footer br{display: none;}
-footer .centerbox1340 .copyright li p{width:25%}
 }
 
 
 
 @media screen and (max-width: 768px){
 header nav{width: 100%;position: absolute;}   
+
+#section3 #span3{display: flex;justify-content: center;align-items: center;width: 90%;margin: 0 auto;}
+#section3 #span3 span{font-size: 3rem;display: block;width: 50%;float: left;margin: 0 auto; text-align: center;padding: 1.5vw 0 1.5vw 0 ;border: 1px solid #cdcdcd;margin-bottom: 3vw;font-weight: 400;color: #cdcdcd;cursor: pointer;}
+#section3 #span3 span:hover{color: #767676;font-weight: 700;border: 1px solid #767676;border-bottom: 0px solid #000;}
 
 }
